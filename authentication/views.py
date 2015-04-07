@@ -9,6 +9,7 @@ from authentication.models import Account
 from authentication.permissions import IsAccountOwner
 from authentication.serializers import AccountSerializer
 
+
 class AccountViewSet(viewsets.ModelViewSet):
     lookup_field = 'username'
     queryset = Account.objects.all()
@@ -36,6 +37,7 @@ class AccountViewSet(viewsets.ModelViewSet):
             'message': 'Account could not be created with received data.'
         }, status=status.HTTP_400_BAD_REQUEST)
 
+
 class LoginView(views.APIView):
     def post(self, request, format=None):
         data = json.loads(request.body)
@@ -62,6 +64,7 @@ class LoginView(views.APIView):
                 'status': 'Unauthorized',
                 'message': 'Username/password combination invalid.'
             }, status=status.HTTP_401_UNAUTHORIZED)
+
 
 class LogoutView(views.APIView):
     permission_classes = (permissions.IsAuthenticated,)
