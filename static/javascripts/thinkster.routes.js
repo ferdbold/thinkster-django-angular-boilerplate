@@ -13,6 +13,11 @@
   */
   function config($routeProvider) {
     $routeProvider
+      .when('/', {
+        controller: 'IndexController',
+        controllerAs: 'vm',
+        templateUrl: '/static/templates/layout/index.html'
+      })
       .when('/register', {
         controller: 'RegisterController',
         controllerAs: 'vm',
