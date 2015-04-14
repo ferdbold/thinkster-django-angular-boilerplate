@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('thinkster.profiles' [
+    .module('thinkster.profiles', [
       'thinkster.profiles.controllers',
       'thinkster.profiles.services'
     ]);

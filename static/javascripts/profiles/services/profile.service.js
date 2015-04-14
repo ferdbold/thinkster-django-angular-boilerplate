@@ -47,7 +47,7 @@
     * @memberOf thinkster.profiles.services.Profile
     */
     function get(username) {
-      return $http.get('/api/v1/accounts/' + profile.id + '/');
+      return $http.get('/api/v1/accounts/' + username + '/');
     }
 
     /**
